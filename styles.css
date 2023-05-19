@@ -44,16 +44,3 @@ input[type="submit"]:hover {
     text-align: center;
   }
 
-@media screen and (max-width: 600px) {
-  body {
-    padding: 10px;
-  }
-
-  form {
-    padding: 10px;
-  }
-
-  input[type="number"], input[type="submit"] {
-    font-size: 14px;
-  }
-}
