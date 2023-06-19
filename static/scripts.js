@@ -9,7 +9,7 @@ document.getElementById("divorce-form").addEventListener("submit", function (eve
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(inputData)
+        body: JSON.stringify({ data: inputData }) // Verileri "data" anahtarına sararak gönderiyoruz
     })
         .then((response) => response.json())
         .then((result) => {
