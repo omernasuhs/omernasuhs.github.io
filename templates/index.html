@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divorce Prediction</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Divorce Prediction</h1>
+    <form id="divorce-form">
+        <div>
+            <label for="question-1">1. If one of us apologizes when our argument gets bad, the argument is over.</label>
+             <div class="radio-group">
+      <input type="radio" id="q1-0" name="1" value="0" required>
+      <label for="q1-0">Never</label>
+      <input type="radio" id="q1-1" name="1" value="1">
+      <label for="q1-1">Rarely</label>
+      <input type="radio" id="q1-2" name="1" value="2">
+      <label for="q1-2">Sometimes</label>
+      <input type="radio" id="q1-3" name="1" value="3">
+      <label for="q1-3">Often</label>
+      <input type="radio" id="q1-4" name="1" value="4">
+      <label for="q1-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-2">2. I know we can ignore our differences sometimes even when things get tough.</label>
+             <div class="radio-group">
+      <input type="radio" id="q2-0" name="2" value="0" required>
+      <label for="q2-0">Never</label>
+      <input type="radio" id="q2-1" name="2" value="1">
+      <label for="q2-1">Rarely</label>
+      <input type="radio" id="q2-2" name="2" value="2">
+      <label for="q2-2">Sometimes</label>
+      <input type="radio" id="q2-3" name="2" value="3">
+      <label for="q2-3">Often</label>
+      <input type="radio" id="q2-4" name="2" value="4">
+      <label for="q2-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-3">3. When we need to, we can reconsider and correct our arguments with my wife.</label>
+             <div class="radio-group">
+      <input type="radio" id="q3-0" name="3" value="0" required>
+      <label for="q3-0">Never</label>
+      <input type="radio" id="q3-1" name="3" value="1">
+      <label for="q3-1">Rarely</label>
+      <input type="radio" id="q3-2" name="3" value="2">
+      <label for="q3-2">Sometimes</label>
+      <input type="radio" id="q3-3" name="3" value="3">
+      <label for="q3-3">Often</label>
+      <input type="radio" id="q3-4" name="3" value="4">
+      <label for="q3-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-4">4. When I talk to my wife, contacting her will finally work.</label>
+            <div class="radio-group">
+      <input type="radio" id="q4-0" name="4" value="0" required>
+      <label for="q4-0">Never</label>
+      <input type="radio" id="q4-1" name="4" value="1">
+      <label for="q4-1">Rarely</label>
+      <input type="radio" id="q4-2" name="4" value="2">
+      <label for="q4-2">Sometimes</label>
+      <input type="radio" id="q4-3" name="4" value="3">
+      <label for="q4-3">Often</label>
+      <input type="radio" id="q4-4" name="4" value="4">
+      <label for="q4-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-5">5. The time I spend with my spouse is special to us.</label>
+            <div class="radio-group">
+      <input type="radio" id="q5-0" name="5" value="0" required>
+      <label for="q5-0">Never</label>
+      <input type="radio" id="q5-1" name="5" value="1">
+      <label for="q5-1">Rarely</label>
+      <input type="radio" id="q5-2" name="5" value="2">
+      <label for="q5-2">Sometimes</label>
+      <input type="radio" id="q5-3" name="5" value="3">
+      <label for="q5-3">Often</label>
+      <input type="radio" id="q5-4" name="5" value="4">
+      <label for="q5-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-6">6. We don't have time at home as partners.</label>
+             <div class="radio-group">
+      <input type="radio" id="q6-0" name="6" value="0" required>
+      <label for="q6-0">Never</label>
+      <input type="radio" id="q6-1" name="6" value="1">
+      <label for="q6-1">Rarely</label>
+      <input type="radio" id="q6-2" name="6" value="2">
+      <label for="q6-2">Sometimes</label>
+      <input type="radio" id="q6-3" name="6" value="3">
+      <label for="q6-3">Often</label>
+      <input type="radio" id="q6-4" name="6" value="4">
+      <label for="q6-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-7">7. We are more like two strangers sharing the same environment at home than family.</label>
+             <div class="radio-group">
+      <input type="radio" id="q7-0" name="7" value="0" required>
+      <label for="q7-0">Never</label>
+      <input type="radio" id="q7-1" name="7" value="1">
+      <label for="q7-1">Rarely</label>
+      <input type="radio" id="q7-2" name="7" value="2">
+      <label for="q7-2">Sometimes</label>
+      <input type="radio" id="q7-3" name="7" value="3">
+      <label for="q7-3">Often</label>
+      <input type="radio" id="q7-4" name="7" value="4">
+      <label for="q7-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-8">8. Enjoying our vacation with my wife.</label>
+             <div class="radio-group">
+      <input type="radio" id="q8-0" name="8" value="0" required>
+      <label for="q8-0">Never</label>
+      <input type="radio" id="q8-1" name="8" value="1">
+      <label for="q8-1">Rarely</label>
+      <input type="radio" id="q8-2" name="8" value="2">
+      <label for="q8-2">Sometimes</label>
+      <input type="radio" id="q8-3" name="8" value="3">
+      <label for="q8-3">Often</label>
+      <input type="radio" id="q8-4" name="8" value="4">
+      <label for="q8-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-9">9. I enjoy traveling with my wife.</label>
+             <div class="radio-group">
+      <input type="radio" id="q9-0" name="9" value="0" required>
+      <label for="q9-0">Never</label>
+      <input type="radio" id="q9-1" name="9" value="1">
+      <label for="q9-1">Rarely</label>
+      <input type="radio" id="q9-2" name="9" value="2">
+      <label for="q9-2">Sometimes</label>
+      <input type="radio" id="q9-3" name="9" value="3">
+      <label for="q9-3">Often</label>
+      <input type="radio" id="q9-4" name="9" value="4">
+      <label for="q9-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-10">10. Most of our goals are common to my partner.</label>
+            <div class="radio-group">
+      <input type="radio" id="q10-0" name="10" value="0" required>
+      <label for="q10-0">Never</label>
+      <input type="radio" id="q10-1" name="10" value="1">
+      <label for="q10-1">Rarely</label>
+      <input type="radio" id="q10-2" name="10" value="2">
+      <label for="q10-2">Sometimes</label>
+      <input type="radio" id="q10-3" name="10" value="3">
+      <label for="q10-3">Often</label>
+      <input type="radio" id="q10-4" name="10" value="4">
+      <label for="q10-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-11">11. One day in the future, when I look back, I think we are in harmony with my wife.</label>
+             <div class="radio-group">
+      <input type="radio" id="q11-0" name="11" value="0" required>
+      <label for="q11-0">Never</label>
+      <input type="radio" id="q11-1" name="11" value="1">
+      <label for="q11-1">Rarely</label>
+      <input type="radio" id="q11-2" name="11" value="2">
+      <label for="q11-2">Sometimes</label>
+      <input type="radio" id="q11-3" name="11" value="3">
+      <label for="q11-3">Often</label>
+      <input type="radio" id="q11-4" name="11" value="4">
+      <label for="q11-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-12">12. My wife and I have similar values in terms of personal freedom.</label>
+             <div class="radio-group">
+      <input type="radio" id="q12-0" name="12" value="0" required>
+      <label for="q12-0">Never</label>
+      <input type="radio" id="q12-1" name="12" value="1">
+      <label for="q12-1">Rarely</label>
+      <input type="radio" id="q12-2" name="12" value="2">
+      <label for="q12-2">Sometimes</label>
+      <input type="radio" id="q12-3" name="12" value="3">
+      <label for="q12-3">Often</label>
+      <input type="radio" id="q12-4" name="12" value="4">
+      <label for="q12-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-13">13. My wife and I have a similar sense of fun.</label>
+             <div class="radio-group">
+      <input type="radio" id="q13-0" name="13" value="0" required>
+      <label for="q13-0">Never</label>
+      <input type="radio" id="q13-1" name="13" value="1">
+      <label for="q13-1">Rarely</label>
+      <input type="radio" id="q13-2" name="13" value="2">
+      <label for="q13-2">Sometimes</label>
+      <input type="radio" id="q13-3" name="13" value="3">
+      <label for="q13-3">Often</label>
+      <input type="radio" id="q13-4" name="13" value="4">
+      <label for="q13-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-14">14. Most of our goals for people (kids, friends, etc.) are the same.</label>
+             <div class="radio-group">
+      <input type="radio" id="q14-0" name="14" value="0" required>
+      <label for="q14-0">Never</label>
+      <input type="radio" id="q14-1" name="14" value="1">
+      <label for="q14-1">Rarely</label>
+      <input type="radio" id="q14-2" name="14" value="2">
+      <label for="q14-2">Sometimes</label>
+      <input type="radio" id="q14-3" name="14" value="3">
+      <label for="q14-3">Often</label>
+      <input type="radio" id="q14-4" name="14" value="4">
+      <label for="q14-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-15">15. Our dreams are similar and compatible with my spouse.</label>
+             <div class="radio-group">
+      <input type="radio" id="q15-0" name="15" value="0" required>
+      <label for="q15-0">Never</label>
+      <input type="radio" id="q15-1" name="15" value="1">
+      <label for="q15-1">Rarely</label>
+      <input type="radio" id="q15-2" name="15" value="2">
+      <label for="q15-2">Sometimes</label>
+      <input type="radio" id="q15-3" name="15" value="3">
+      <label for="q15-3">Often</label>
+      <input type="radio" id="q15-4" name="15" value="4">
+      <label for="q15-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-16">16. My wife and I agree on what love should be.</label>
+             <div class="radio-group">
+      <input type="radio" id="q16-0" name="16" value="0" required>
+      <label for="q16-0">Never</label>
+      <input type="radio" id="q16-1" name="16" value="1">
+      <label for="q16-1">Rarely</label>
+      <input type="radio" id="q16-2" name="16" value="2">
+      <label for="q16-2">Sometimes</label>
+      <input type="radio" id="q16-3" name="16" value="3">
+      <label for="q16-3">Often</label>
+      <input type="radio" id="q16-4" name="16" value="4">
+      <label for="q16-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-17">17. My wife and I share the same views on being happy in our lives.</label>
+             <div class="radio-group">
+      <input type="radio" id="q17-0" name="17" value="0" required>
+      <label for="q17-0">Never</label>
+      <input type="radio" id="q17-1" name="17" value="1">
+      <label for="q17-1">Rarely</label>
+      <input type="radio" id="q17-2" name="17" value="2">
+      <label for="q17-2">Sometimes</label>
+      <input type="radio" id="q17-3" name="17" value="3">
+      <label for="q17-3">Often</label>
+      <input type="radio" id="q17-4" name="17" value="4">
+      <label for="q17-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-18">18. My wife and I have similar ideas about what marriage should be like.</label>
+             <div class="radio-group">
+      <input type="radio" id="q18-0" name="18" value="0" required>
+      <label for="q18-0">Never</label>
+      <input type="radio" id="q18-1" name="18" value="1">
+      <label for="q18-1">Rarely</label>
+      <input type="radio" id="q18-2" name="18" value="2">
+      <label for="q18-2">Sometimes</label>
+      <input type="radio" id="q18-3" name="18" value="3">
+      <label for="q18-3">Often</label>
+      <input type="radio" id="q18-4" name="18" value="4">
+      <label for="q18-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-19">19. My wife and I have similar ideas about what roles should be in marriage.</label>
+             <div class="radio-group">
+      <input type="radio" id="q19-0" name="19" value="0" required>
+      <label for="q19-0">Never</label>
+      <input type="radio" id="q19-1" name="19" value="1">
+      <label for="q19-1">Rarely</label>
+      <input type="radio" id="q19-2" name="19" value="2">
+      <label for="q19-2">Sometimes</label>
+      <input type="radio" id="q19-3" name="19" value="3">
+      <label for="q19-3">Often</label>
+      <input type="radio" id="q19-4" name="19" value="4">
+      <label for="q19-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-20">20. My wife and I have similar values for trust.</label>
+             <div class="radio-group">
+      <input type="radio" id="q20-0" name="20" value="0" required>
+      <label for="q20-0">Never</label>
+      <input type="radio" id="q20-1" name="20" value="1">
+      <label for="q20-1">Rarely</label>
+      <input type="radio" id="q20-2" name="20" value="2">
+      <label for="q20-2">Sometimes</label>
+      <input type="radio" id="q20-3" name="20" value="3">
+      <label for="q20-3">Often</label>
+      <input type="radio" id="q20-4" name="20" value="4">
+      <label for="q20-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-21">21. I know very well what my wife likes.</label>
+             <div class="radio-group">
+      <input type="radio" id="q21-0" name="21" value="0" required>
+      <label for="q21-0">Never</label>
+      <input type="radio" id="q21-1" name="21" value="1">
+      <label for="q21-1">Rarely</label>
+      <input type="radio" id="q21-2" name="21" value="2">
+      <label for="q21-2">Sometimes</label>
+      <input type="radio" id="q21-3" name="21" value="3">
+      <label for="q21-3">Often</label>
+      <input type="radio" id="q21-4" name="21" value="4">
+      <label for="q21-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-22">22. I know how my wife wants to be taken care of when she is sick.</label>
+             <div class="radio-group">
+      <input type="radio" id="q22-0" name="22" value="0" required>
+      <label for="q22-0">Never</label>
+      <input type="radio" id="q22-1" name="22" value="1">
+      <label for="q22-1">Rarely</label>
+      <input type="radio" id="q22-2" name="22" value="2">
+      <label for="q22-2">Sometimes</label>
+      <input type="radio" id="q22-3" name="22" value="3">
+      <label for="q22-3">Often</label>
+      <input type="radio" id="q22-4" name="22" value="4">
+      <label for="q22-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-23">23. I know my wife's favorite food.</label>
+             <div class="radio-group">
+      <input type="radio" id="q23-0" name="23" value="0" required>
+      <label for="q23-0">Never</label>
+      <input type="radio" id="q23-1" name="23" value="1">
+      <label for="q23-1">Rarely</label>
+      <input type="radio" id="q23-2" name="23" value="2">
+      <label for="q23-2">Sometimes</label>
+      <input type="radio" id="q23-3" name="23" value="3">
+      <label for="q23-3">Often</label>
+      <input type="radio" id="q23-4" name="23" value="4">
+      <label for="q23-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-24">24. I can tell you what kind of stress my wife is experiencing.</label>
+            <div class="radio-group">
+      <input type="radio" id="q24-0" name="24" value="0" required>
+      <label for="q24-0">Never</label>
+      <input type="radio" id="q24-1" name="24" value="1">
+      <label for="q24-1">Rarely</label>
+      <input type="radio" id="q24-2" name="24" value="2">
+      <label for="q24-2">Sometimes</label>
+      <input type="radio" id="q24-3" name="24" value="3">
+      <label for="q24-3">Often</label>
+      <input type="radio" id="q24-4" name="24" value="4">
+      <label for="q24-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-25">25. I have knowledge of my wife's inner world.</label>
+             <div class="radio-group">
+      <input type="radio" id="q25-0" name="25" value="0" required>
+      <label for="q25-0">Never</label>
+      <input type="radio" id="q25-1" name="25" value="1">
+      <label for="q25-1">Rarely</label>
+      <input type="radio" id="q25-2" name="25" value="2">
+      <label for="q25-2">Sometimes</label>
+      <input type="radio" id="q25-3" name="25" value="3">
+      <label for="q25-3">Often</label>
+      <input type="radio" id="q25-4" name="25" value="4">
+      <label for="q25-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-26">26. I know my wife's basic anxiety.</label>
+             <div class="radio-group">
+      <input type="radio" id="q26-0" name="26" value="0" required>
+      <label for="q26-0">Never</label>
+      <input type="radio" id="q26-1" name="26" value="1">
+      <label for="q26-1">Rarely</label>
+      <input type="radio" id="q26-2" name="26" value="2">
+      <label for="q26-2">Sometimes</label>
+      <input type="radio" id="q26-3" name="26" value="3">
+      <label for="q26-3">Often</label>
+      <input type="radio" id="q26-4" name="26" value="4">
+      <label for="q26-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-27">27. I know what my wife's current sources of stress are.</label>
+             <div class="radio-group">
+      <input type="radio" id="q27-0" name="27" value="0" required>
+      <label for="q27-0">Never</label>
+      <input type="radio" id="q27-1" name="27" value="1">
+      <label for="q27-1">Rarely</label>
+      <input type="radio" id="q27-2" name="27" value="2">
+      <label for="q27-2">Sometimes</label>
+      <input type="radio" id="q27-3" name="27" value="3">
+      <label for="q27-3">Often</label>
+      <input type="radio" id="q27-4" name="27" value="4">
+      <label for="q27-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-28">28. I know my wife's hopes and wishes.</label>
+             <div class="radio-group">
+      <input type="radio" id="q28-0" name="28" value="0" required>
+      <label for="q28-0">Never</label>
+      <input type="radio" id="q28-1" name="28" value="1">
+      <label for="q28-1">Rarely</label>
+      <input type="radio" id="q28-2" name="28" value="2">
+      <label for="q28-2">Sometimes</label>
+      <input type="radio" id="q28-3" name="28" value="3">
+      <label for="q28-3">Often</label>
+      <input type="radio" id="q28-4" name="28" value="4">
+      <label for="q28-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-29">29. I know my wife very well.</label>
+             <div class="radio-group">
+      <input type="radio" id="q29-0" name="29" value="0" required>
+      <label for="q29-0">Never</label>
+      <input type="radio" id="q29-1" name="29" value="1">
+      <label for="q29-1">Rarely</label>
+      <input type="radio" id="q29-2" name="29" value="2">
+      <label for="q29-2">Sometimes</label>
+      <input type="radio" id="q29-3" name="29" value="3">
+      <label for="q29-3">Often</label>
+      <input type="radio" id="q29-4" name="29" value="4">
+      <label for="q29-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-30">30. I know my wife's friends and their social relationships.</label>
+             <div class="radio-group">
+      <input type="radio" id="q30-0" name="30" value="0" required>
+      <label for="q30-0">Never</label>
+      <input type="radio" id="q30-1" name="30" value="1">
+      <label for="q30-1">Rarely</label>
+      <input type="radio" id="q30-2" name="30" value="2">
+      <label for="q30-2">Sometimes</label>
+      <input type="radio" id="q30-3" name="30" value="3">
+      <label for="q30-3">Often</label>
+      <input type="radio" id="q30-4" name="30" value="4">
+      <label for="q30-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-31">31. I feel aggressive when I argue with my wife.</label>
+             <div class="radio-group">
+      <input type="radio" id="q31-0" name="31" value="0" required>
+      <label for="q31-0">Never</label>
+      <input type="radio" id="q31-1" name="31" value="1">
+      <label for="q31-1">Rarely</label>
+      <input type="radio" id="q31-2" name="31" value="2">
+      <label for="q31-2">Sometimes</label>
+      <input type="radio" id="q31-3" name="31" value="3">
+      <label for="q31-3">Often</label>
+      <input type="radio" id="q31-4" name="31" value="4">
+      <label for="q31-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-32">32. When discussing with my wife, I usually use offensive expressions.</label>
+                         <div class="radio-group">
+      <input type="radio" id="q32-0" name="32" value="0" required>
+      <label for="q32-0">Never</label>
+      <input type="radio" id="q32-1" name="32" value="1">
+      <label for="q32-1">Rarely</label>
+      <input type="radio" id="q32-2" name="32" value="2">
+      <label for="q32-2">Sometimes</label>
+      <input type="radio" id="q32-3" name="32" value="3">
+      <label for="q32-3">Often</label>
+      <input type="radio" id="q32-4" name="32" value="4">
+      <label for="q32-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-33">33. I can use negative statements about my wife's personality during our discussions.</label>
+             <div class="radio-group">
+      <input type="radio" id="q33-0" name="33" value="0" required>
+      <label for="q33-0">Never</label>
+      <input type="radio" id="q33-1" name="33" value="1">
+      <label for="q33-1">Rarely</label>
+      <input type="radio" id="q33-2" name="33" value="2">
+      <label for="q33-2">Sometimes</label>
+      <input type="radio" id="q33-3" name="33" value="3">
+      <label for="q33-3">Often</label>
+      <input type="radio" id="q33-4" name="33" value="4">
+      <label for="q33-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-34">34. I can use offensive expressions during our discussions.</label>
+             <div class="radio-group">
+      <input type="radio" id="q34-0" name="34" value="0" required>
+      <label for="q34-0">Never</label>
+      <input type="radio" id="q34-1" name="34" value="1">
+      <label for="q34-1">Rarely</label>
+      <input type="radio" id="q34-2" name="34" value="2">
+      <label for="q34-2">Sometimes</label>
+      <input type="radio" id="q34-3" name="34" value="3">
+      <label for="q34-3">Often</label>
+      <input type="radio" id="q34-4" name="34" value="4">
+      <label for="q34-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-35">35. I can insult my wife during our discussions.</label>
+             <div class="radio-group">
+      <input type="radio" id="q35-0" name="35" value="0" required>
+      <label for="q35-0">Never</label>
+      <input type="radio" id="q35-1" name="35" value="1">
+      <label for="q35-1">Rarely</label>
+      <input type="radio" id="q35-2" name="35" value="2">
+      <label for="q35-2">Sometimes</label>
+      <input type="radio" id="q35-3" name="35" value="3">
+      <label for="q35-3">Often</label>
+      <input type="radio" id="q35-4" name="35" value="4">
+      <label for="q35-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-36">36. I can be humiliating when we discuss.</label>
+             <div class="radio-group">
+      <input type="radio" id="q36-0" name="36" value="0" required>
+      <label for="q36-0">Never</label>
+      <input type="radio" id="q36-1" name="36" value="1">
+      <label for="q36-1">Rarely</label>
+      <input type="radio" id="q36-2" name="36" value="2">
+      <label for="q36-2">Sometimes</label>
+      <input type="radio" id="q36-3" name="36" value="3">
+      <label for="q36-3">Often</label>
+      <input type="radio" id="q36-4" name="36" value="4">
+      <label for="q36-4">Always</label>
+    </div>
+        <div>
+            <label for="question-37">37. My discussion style is insulting and humiliating my wife.</label>
+             <div class="radio-group">
+      <input type="radio" id="q37-0" name="37" value="0" required>
+      <label for="q37-0">Never</label>
+      <input type="radio" id="q37-1" name="37" value="1">
+      <label for="q37-1">Rarely</label>
+      <input type="radio" id="q37-2" name="37" value="2">
+      <label for="q37-2">Sometimes</label>
+      <input type="radio" id="q37-3" name="37" value="3">
+      <label for="q37-3">Often</label>
+      <input type="radio" id="q37-4" name="37" value="4">
+      <label for="q37-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-38">38. I hate my wife's way of opening a subject.</label>
+             <div class="radio-group">
+      <input type="radio" id="q38-0" name="38" value="0" required>
+      <label for="q38-0">Never</label>
+      <input type="radio" id="q38-1" name="38" value="1">
+      <label for="q38-1">Rarely</label>
+      <input type="radio" id="q38-2" name="38" value="2">
+      <label for="q38-2">Sometimes</label>
+      <input type="radio" id="q38-3" name="38" value="3">
+      <label for="q38-3">Often</label>
+      <input type="radio" id="q38-4" name="38" value="4">
+      <label for="q38-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-39">39. Our discussions often occur suddenly.</label>
+             <div class="radio-group">
+      <input type="radio" id="q39-0" name="39" value="0" required>
+      <label for="q39-0">Never</label>
+      <input type="radio" id="q39-1" name="39" value="1">
+      <label for="q39-1">Rarely</label>
+      <input type="radio" id="q39-2" name="39" value="2">
+      <label for="q39-2">Sometimes</label>
+      <input type="radio" id="q39-3" name="39" value="3">
+      <label for="q39-3">Often</label>
+      <input type="radio" id="q39-4" name="39" value="4">
+      <label for="q39-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-40">40. We're just starting a discussion before I know what's going on.</label>
+             <div class="radio-group">
+      <input type="radio" id="q40-0" name="40" value="0" required>
+      <label for="q40-0">Never</label>
+      <input type="radio" id="q40-1" name="40" value="1">
+      <label for="q40-1">Rarely</label>
+      <input type="radio" id="q40-2" name="40" value="2">
+      <label for="q40-2">Sometimes</label>
+      <input type="radio" id="q40-3" name="40" value="3">
+      <label for="q40-3">Often</label>
+      <input type="radio" id="q40-4" name="40" value="4">
+      <label for="q40-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-41">41. When I talk to my wife about something, my calm suddenly breaks.</label>
+             <div class="radio-group">
+      <input type="radio" id="q41-0" name="41" value="0" required>
+      <label for="q41-0">Never</label>
+      <input type="radio" id="q41-1" name="41" value="1">
+      <label for="q41-1">Rarely</label>
+      <input type="radio" id="q41-2" name="41" value="2">
+      <label for="q41-2">Sometimes</label>
+      <input type="radio" id="q41-3" name="41" value="3">
+      <label for="q41-3">Often</label>
+      <input type="radio" id="q41-4" name="41" value="4">
+      <label for="q41-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-42">42. When I argue with my wife, ı only go out and I don't say a word.</label>
+             <div class="radio-group">
+      <input type="radio" id="q42-0" name="42" value="0" required>
+      <label for="q42-0">Never</label>
+      <input type="radio" id="q42-1" name="42" value="1">
+      <label for="q42-1">Rarely</label>
+      <input type="radio" id="q42-2" name="42" value="2">
+      <label for="q42-2">Sometimes</label>
+      <input type="radio" id="q42-3" name="42" value="3">
+      <label for="q42-3">Often</label>
+      <input type="radio" id="q42-4" name="42" value="4">
+      <label for="q42-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-43">43. I usually keep quiet to calm things down a bit.</label>
+             <div class="radio-group">
+      <input type="radio" id="q43-0" name="43" value="0" required>
+      <label for="q43-0">Never</label>
+      <input type="radio" id="q43-1" name="43" value="1">
+      <label for="q43-1">Rarely</label>
+      <input type="radio" id="q43-2" name="43" value="2">
+      <label for="q43-2">Sometimes</label>
+      <input type="radio" id="q43-3" name="43" value="3">
+      <label for="q43-3">Often</label>
+      <input type="radio" id="q43-4" name="43" value="4">
+      <label for="q43-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-44">44. Sometimes I think it's good for me to leave home for a while.</label>
+             <div class="radio-group">
+      <input type="radio" id="q44-0" name="44" value="0" required>
+      <label for="q44-0">Never</label>
+      <input type="radio" id="q44-1" name="44" value="1">
+      <label for="q44-1">Rarely</label>
+      <input type="radio" id="q44-2" name="44" value="2">
+      <label for="q44-2">Sometimes</label>
+      <input type="radio" id="q44-3" name="44" value="3">
+      <label for="q44-3">Often</label>
+      <input type="radio" id="q44-4" name="44" value="4">
+      <label for="q44-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-45">45. I would rather remain silent than argue with my wife.</label>
+             <div class="radio-group">
+      <input type="radio" id="q45-0" name="45" value="0" required>
+      <label for="q45-0">Never</label>
+      <input type="radio" id="q45-1" name="45" value="1">
+      <label for="q45-1">Rarely</label>
+      <input type="radio" id="q45-2" name="45" value="2">
+      <label for="q45-2">Sometimes</label>
+      <input type="radio" id="q45-3" name="45" value="3">
+      <label for="q45-3">Often</label>
+      <input type="radio" id="q45-4" name="45" value="4">
+      <label for="q45-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-46">46. Even if I am right in the argument, I keep silent to offend my wife.</label>
+             <div class="radio-group">
+      <input type="radio" id="q46-0" name="46" value="0" required>
+      <label for="q46-0">Never</label>
+      <input type="radio" id="q46-1" name="46" value="1">
+      <label for="q46-1">Rarely</label>
+      <input type="radio" id="q46-2" name="46" value="2">
+      <label for="q46-2">Sometimes</label>
+      <input type="radio" id="q46-3" name="46" value="3">
+      <label for="q46-3">Often</label>
+      <input type="radio" id="q46-4" name="46" value="4">
+      <label for="q46-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-47">47. When arguing with my spouse, I remain silent for fear of not being able to control my anger.</label>
+             <div class="radio-group">
+      <input type="radio" id="q47-0" name="47" value="0" required>
+      <label for="q47-0">Never</label>
+      <input type="radio" id="q47-1" name="47" value="1">
+      <label for="q47-1">Rarely</label>
+      <input type="radio" id="q47-2" name="47" value="2">
+      <label for="q47-2">Sometimes</label>
+      <input type="radio" id="q47-3" name="47" value="3">
+      <label for="q47-3">Often</label>
+      <input type="radio" id="q47-4" name="47" value="4">
+      <label for="q47-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-48">48. I feel right in our discussions.</label>
+             <div class="radio-group">
+      <input type="radio" id="q48-0" name="48" value="0" required>
+      <label for="q48-0">Never</label>
+      <input type="radio" id="q48-1" name="48" value="1">
+      <label for="q48-1">Rarely</label>
+      <input type="radio" id="q48-2" name="48" value="2">
+      <label for="q48-2">Sometimes</label>
+      <input type="radio" id="q48-3" name="48" value="3">
+      <label for="q48-3">Often</label>
+      <input type="radio" id="q48-4" name="48" value="4">
+      <label for="q48-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-49">49. I have nothing to do with what I am accused of.</label>
+             <div class="radio-group">
+      <input type="radio" id="q49-0" name="49" value="0" required>
+      <label for="q49-0">Never</label>
+      <input type="radio" id="q49-1" name="49" value="1">
+      <label for="q49-1">Rarely</label>
+      <input type="radio" id="q49-2" name="49" value="2">
+      <label for="q49-2">Sometimes</label>
+      <input type="radio" id="q49-3" name="49" value="3">
+      <label for="q49-3">Often</label>
+      <input type="radio" id="q49-4" name="49" value="4">
+      <label for="q49-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-50">50. Actually, I am not guilty of what I am accused of.</label>
+             <div class="radio-group">
+      <input type="radio" id="q50-0" name="50" value="0" required>
+      <label for="q50-0">Never</label>
+      <input type="radio" id="q50-1" name="50" value="1">
+      <label for="q50-1">Rarely</label>
+      <input type="radio" id="q50-2" name="50" value="2">
+      <label for="q50-2">Sometimes</label>
+      <input type="radio" id="q50-3" name="50" value="3">
+      <label for="q50-3">Often</label>
+      <input type="radio" id="q50-4" name="50" value="4">
+      <label for="q50-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-51">51. I'm not wrong about the problems in the house.</label>
+             <div class="radio-group">
+      <input type="radio" id="q51-0" name="51" value="0" required>
+      <label for="q51-0">Never</label>
+      <input type="radio" id="q51-1" name="51" value="1">
+      <label for="q51-1">Rarely</label>
+      <input type="radio" id="q51-2" name="51" value="2">
+      <label for="q51-2">Sometimes</label>
+      <input type="radio" id="q51-3" name="51" value="3">
+      <label for="q51-3">Often</label>
+      <input type="radio" id="q51-4" name="51" value="4">
+      <label for="q51-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-52">52. I don't hesitate to tell my wife about her incompetence.</label>
+             <div class="radio-group">
+      <input type="radio" id="q52-0" name="52" value="0" required>
+      <label for="q52-0">Never</label>
+      <input type="radio" id="q52-1" name="52" value="1">
+      <label for="q52-1">Rarely</label>
+      <input type="radio" id="q52-2" name="52" value="2">
+      <label for="q52-2">Sometimes</label>
+      <input type="radio" id="q52-3" name="52" value="3">
+      <label for="q52-3">Often</label>
+      <input type="radio" id="q52-4" name="52" value="4">
+      <label for="q52-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-53">53. When I argue, I remind my wife of her inadequacy.</label>
+             <div class="radio-group">
+      <input type="radio" id="q53-0" name="53" value="0" required>
+      <label for="q53-0">Never</label>
+      <input type="radio" id="q53-1" name="53" value="1">
+      <label for="q53-1">Rarely</label>
+      <input type="radio" id="q53-2" name="53" value="2">
+      <label for="q53-2">Sometimes</label>
+      <input type="radio" id="q53-3" name="53" value="3">
+      <label for="q53-3">Often</label>
+      <input type="radio" id="q53-4" name="53" value="4">
+      <label for="q53-4">Always</label>
+    </div>
+        </div>
+        <div>
+            <label for="question-54">54. I'm not afraid to tell my wife about her incompetence.</label>
+             <div class="radio-group">
+      <input type="radio" id="q54-0" name="54" value="0" required>
+      <label for="q54-0">Never</label>
+      <input type="radio" id="q54-1" name="54" value="1">
+      <label for="q54-1">Rarely</label>
+      <input type="radio" id="q54-2" name="54" value="2">
+      <label for="q54-2">Sometimes</label>
+      <input type="radio" id="q54-3" name="54" value="3">
+      <label for="q54-3">Often</label>
+      <input type="radio" id="q54-4" name="54" value="4">
+      <label for="q54-4">Always</label>
+    </div>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+  <script src="/static/scripts.js"></script>
+</body>
+</html>
+
+            
